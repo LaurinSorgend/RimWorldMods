@@ -12,10 +12,11 @@
   <AFT.NoMatches>No matching animals.</AFT.NoMatches>
   <AFT.NoFamily>No recorded family for {0}.</AFT.NoFamily>
   <AFT.Truncated>Large family: showing the nearest {0} relatives. Double-click someone near the edge to see further.</AFT.Truncated>
-  <AFT.MouseControls>Drag / WASD: move    Ctrl + scroll or +/-: zoom    Double-click: re-center    Right-click: actions</AFT.MouseControls>
+  <AFT.MouseControls>Drag or scroll: move    Ctrl + scroll or +/-: zoom    Double-click: re-center    Right-click: actions</AFT.MouseControls>
   <AFT.ResetView>Reset view</AFT.ResetView>
   <AFT.Legend>Legend</AFT.Legend>
   <AFT.Back>Back</AFT.Back>
+  <AFT.TreeError>Could not draw the family tree of {0}. Details are in the log.</AFT.TreeError>
 
   <!-- Status -->
   <AFT.AgeYears>{0} years</AFT.AgeYears>
