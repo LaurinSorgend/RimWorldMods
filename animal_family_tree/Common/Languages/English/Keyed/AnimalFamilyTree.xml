@@ -74,6 +74,7 @@
   <AFT.Rel.Grand>grand</AFT.Rel.Grand>
   <AFT.Rel.Great>great-</AFT.Rel.Great>
   <AFT.Rel.Half>half-</AFT.Rel.Half>
+  <AFT.Rel.Possessive>{0}'s {1}</AFT.Rel.Possessive>
 
   <!-- Settings -->
   <AFT.SettingsCategory>Animal Family Tree</AFT.SettingsCategory>
