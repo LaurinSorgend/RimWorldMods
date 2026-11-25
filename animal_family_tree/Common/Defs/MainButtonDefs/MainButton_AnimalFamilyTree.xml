@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MainButtonDef>
+    <defName>AFT_AnimalFamilyTree</defName>
+    <label>Animal family</label>
+    <description>Browse your animals and view their family trees.</description>
+    <tabWindowClass>AnimalFamilyTree.MainTabWindow_AnimalFamilyTree</tabWindowClass>
+    <iconPath>UI/AnimalFamilyTree/BarIcon</iconPath>
+    <order>52</order>
+  </MainButtonDef>
+</Defs>

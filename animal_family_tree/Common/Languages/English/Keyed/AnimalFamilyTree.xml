@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Window and list -->
+  <AFT.SelectAnimal>Select an animal to view its family tree.</AFT.SelectAnimal>
+  <AFT.SearchPlaceholder>Search animals...</AFT.SearchPlaceholder>
+  <AFT.AllSpecies>All species</AFT.AllSpecies>
+  <AFT.Filter.Alive>Alive</AFT.Filter.Alive>
+  <AFT.Filter.Dead>Dead</AFT.Filter.Dead>
+  <AFT.Filter.All>Alive and dead</AFT.Filter.All>
+  <AFT.Filter.Relatives>Include relatives</AFT.Filter.Relatives>
+  <AFT.Filter.RelativesTip>Also list wild, sold and visiting relatives of your animals.</AFT.Filter.RelativesTip>
+  <AFT.NoMatches>No matching animals.</AFT.NoMatches>
+  <AFT.NoFamily>No recorded family for {0}.</AFT.NoFamily>
+  <AFT.Truncated>Large family: showing the nearest {0} relatives. Double-click someone near the edge to see further.</AFT.Truncated>
+  <AFT.MouseControls>Drag / WASD: move    Ctrl + scroll or +/-: zoom    Double-click: re-center    Right-click: actions</AFT.MouseControls>
+  <AFT.ResetView>Reset view</AFT.ResetView>
+  <AFT.Legend>Legend</AFT.Legend>
+  <AFT.Back>Back</AFT.Back>
+
+  <!-- Status -->
+  <AFT.AgeYears>{0} years</AFT.AgeYears>
+  <AFT.AgeAtDeath>died aged {0}</AFT.AgeAtDeath>
+  <AFT.Status.Dead>Dead</AFT.Status.Dead>
+  <AFT.Status.Gone>No longer in the world</AFT.Status.Gone>
+  <AFT.Status.OnMap>On map: {0}</AFT.Status.OnMap>
+  <AFT.Status.Caravan>In caravan: {0}</AFT.Status.Caravan>
+  <AFT.Status.Away>Away</AFT.Status.Away>
+  <AFT.Status.Wild>Wild</AFT.Status.Wild>
+  <AFT.Status.Faction>With {0}</AFT.Status.Faction>
+  <AFT.Status.Colony>Colony animal</AFT.Status.Colony>
+  <AFT.Tooltip.Relation>Relation: {0}</AFT.Tooltip.Relation>
+  <AFT.Tooltip.Kind>Species: {0}</AFT.Tooltip.Kind>
+  <AFT.Tooltip.Children>Offspring: {0}</AFT.Tooltip.Children>
+  <AFT.Tooltip.Hint>Double-click: view its tree. Right-click: actions.</AFT.Tooltip.Hint>
+
+  <!-- Right-click actions -->
+  <AFT.Locate>Locate</AFT.Locate>
+  <AFT.ViewTree>View its tree</AFT.ViewTree>
+  <AFT.InfoCard>Info card</AFT.InfoCard>
+  <AFT.CannotLocate>Could not locate {0}.</AFT.CannotLocate>
+
+  <!-- Legend -->
+  <AFT.Legend.Self>Viewed animal</AFT.Legend.Self>
+  <AFT.Legend.Blood>Parent / child line</AFT.Legend.Blood>
+  <AFT.Legend.Mates>Mates (shared offspring)</AFT.Legend.Mates>
+  <AFT.Legend.Dead>Dead</AFT.Legend.Dead>
+  <AFT.Legend.Gone>No longer in the world</AFT.Legend.Gone>
+  <AFT.Legend.Colony>Colony animal</AFT.Legend.Colony>
+
+  <!-- Gizmo -->
+  <AFT.Gizmo.Label>Family tree</AFT.Gizmo.Label>
+  <AFT.Gizmo.Desc>Open this animal's family tree.</AFT.Gizmo.Desc>
+
+  <!-- Relationship names, lowercase, composed like "great-grandmother" -->
+  <AFT.Rel.Self>self</AFT.Rel.Self>
+  <AFT.Rel.Mother>mother</AFT.Rel.Mother>
+  <AFT.Rel.Father>father</AFT.Rel.Father>
+  <AFT.Rel.Parent>parent</AFT.Rel.Parent>
+  <AFT.Rel.Daughter>daughter</AFT.Rel.Daughter>
+  <AFT.Rel.Son>son</AFT.Rel.Son>
+  <AFT.Rel.Child>offspring</AFT.Rel.Child>
+  <AFT.Rel.Sister>sister</AFT.Rel.Sister>
+  <AFT.Rel.Brother>brother</AFT.Rel.Brother>
+  <AFT.Rel.Sibling>sibling</AFT.Rel.Sibling>
+  <AFT.Rel.Aunt>aunt</AFT.Rel.Aunt>
+  <AFT.Rel.Uncle>uncle</AFT.Rel.Uncle>
+  <AFT.Rel.AuntOrUncle>aunt or uncle</AFT.Rel.AuntOrUncle>
+  <AFT.Rel.Niece>niece</AFT.Rel.Niece>
+  <AFT.Rel.Nephew>nephew</AFT.Rel.Nephew>
+  <AFT.Rel.NieceOrNephew>niece or nephew</AFT.Rel.NieceOrNephew>
+  <AFT.Rel.Cousin>cousin</AFT.Rel.Cousin>
+  <AFT.Rel.Mate>mate</AFT.Rel.Mate>
+  <AFT.Rel.Relative>relative</AFT.Rel.Relative>
+  <AFT.Rel.Grand>grand</AFT.Rel.Grand>
+  <AFT.Rel.Great>great-</AFT.Rel.Great>
+  <AFT.Rel.Half>half-</AFT.Rel.Half>
+
+  <!-- Settings -->
+  <AFT.SettingsCategory>Animal Family Tree</AFT.SettingsCategory>
+  <AFT.Settings.GenerationsUp>Generations of ancestors shown: {0}</AFT.Settings.GenerationsUp>
+  <AFT.Settings.GenerationsDown>Generations of descendants shown: {0}</AFT.Settings.GenerationsDown>
+  <AFT.Settings.MaxNodes>Maximum animals in one tree: {0}</AFT.Settings.MaxNodes>
+  <AFT.Settings.DeadAsTombstone>Show dead animals with a grave marker</AFT.Settings.DeadAsTombstone>
+  <AFT.Settings.DeadAsTombstoneTip>Dead animals get a gravestone on top of their icon.</AFT.Settings.DeadAsTombstoneTip>
+  <AFT.Settings.TrackFormer>Keep following animals that left the colony</AFT.Settings.TrackFormer>
+  <AFT.Settings.TrackFormerTip>Sold, released or gifted animals keep getting their new offspring recorded while they still exist in the world.</AFT.Settings.TrackFormerTip>
+</LanguageData>
