@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Animal Family Tree</name>
+  <author>Laurin</author>
+  <packageId>laurin.animalfamilytree</packageId>
+  <modVersion>0.1.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Adds an Animal Family tab that draws the family tree of your colony's animals: parents, grandparents, mates, children, siblings and cousins.
+
+The mod keeps its own lineage records, so ancestors stay in the tree after they die, are butchered, sold or released. Select an animal and use the "Family tree" button to jump straight to its tree.
+
+No Harmony. Safe to add to an existing save.</description>
+</ModMetaData>

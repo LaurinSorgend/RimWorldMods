@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+.idea/
+*.user
+CLAUDE.md
+.claude/
+1.6/Assemblies/*.pdb
