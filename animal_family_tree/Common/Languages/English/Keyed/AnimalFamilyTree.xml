@@ -42,8 +42,8 @@
 
   <!-- Legend -->
   <AFT.Legend.Self>Viewed animal</AFT.Legend.Self>
-  <AFT.Legend.Blood>Parent / child line</AFT.Legend.Blood>
-  <AFT.Legend.Mates>Mates (shared offspring)</AFT.Legend.Mates>
+  <AFT.Legend.Families>One line color per pair of parents</AFT.Legend.Families>
+  <AFT.Legend.Hover>Hover an animal to highlight its lines.</AFT.Legend.Hover>
   <AFT.Legend.Dead>Dead</AFT.Legend.Dead>
   <AFT.Legend.Gone>No longer in the world</AFT.Legend.Gone>
   <AFT.Legend.Colony>Colony animal</AFT.Legend.Colony>

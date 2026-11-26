@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -10,9 +11,6 @@ namespace AnimalFamilyTree
         private const float MinZoom = 0.3f;
         private const float MaxZoom = 2f;
         private const float ScrollPanSpeed = 24f;
-
-        public static readonly Color LineColor = new Color(0.75f, 0.75f, 0.75f, 0.8f);
-        public static readonly Color MateLineColor = new Color(0.9f, 0.55f, 0.4f, 0.9f);
 
         private Vector2 offset;
         private float zoom = 1f;
@@ -35,7 +33,7 @@ namespace AnimalFamilyTree
             Rect local = rect.AtZero();
             if (needsReset)
                 CenterOn(local, layout.rects[graph.rootId]);
-            DrawLines(layout);
+            DrawLines(layout, FocusId(local, layout));
             DrawNodes(local, graph, layout);
             HandleCanvasInput(local);
             Widgets.EndGroup();
@@ -55,11 +53,41 @@ namespace AnimalFamilyTree
 
         private Vector2 ToScreen(Vector2 p) => offset + p * zoom;
 
-        private void DrawLines(TreeLayout layout)
+        /// <summary>The hovered node, or the selected one, whose family lines get highlighted.</summary>
+        private string FocusId(Rect local, TreeLayout layout)
         {
-            float width = Mathf.Max(1f, 2f * zoom);
+            Vector2 mouse = Event.current.mousePosition;
+            if (local.Contains(mouse))
+            {
+                foreach (var pair in layout.rects)
+                {
+                    if (ToScreen(pair.Value).Contains(mouse))
+                        return pair.Key;
+                }
+            }
+            return SelectedId;
+        }
+
+        private void DrawLines(TreeLayout layout, string focusId)
+        {
+            bool focusing = layout.families.Any(f => f.Involves(focusId));
+            DrawLinePass(layout, focusing, focusId, false);
+            if (focusing)
+                DrawLinePass(layout, true, focusId, true);
+        }
+
+        private void DrawLinePass(TreeLayout layout, bool focusing, string focusId, bool litPass)
+        {
+            float width = Mathf.Max(1f, (litPass ? 3f : 2f) * zoom);
             foreach (TreeLine line in layout.lines)
-                Widgets.DrawLine(ToScreen(line.a), ToScreen(line.b), line.mateBar ? MateLineColor : LineColor, width);
+            {
+                TreeFamily family = layout.families[line.family];
+                if (focusing && family.Involves(focusId) != litPass)
+                    continue;
+                Color color = family.color;
+                color.a = focusing && !litPass ? 0.22f : 1f;
+                Widgets.DrawLine(ToScreen(line.a), ToScreen(line.b), color, width);
+            }
         }
 
         private void DrawNodes(Rect local, FamilyGraph graph, TreeLayout layout)
