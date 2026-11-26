@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Animal Family Tree</name>
   <author>Laurin</author>
-  <packageId>laurin.animalfamilytree</packageId>
+  <packageId>laurinsorgend.rimworldmods.animalfamilytree</packageId>
   <modVersion>0.1.0</modVersion>
   <url>https://github.com/LaurinSorgend/RimWorldMods/tree/main/animal_family_tree</url>
   <supportedVersions>
