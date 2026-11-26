@@ -1,17 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework Condition="'$(GameVersion)' == '1.6'">net48</TargetFramework>
+    <TargetFramework Condition="'$(GameVersion)' == '1.7'">net10.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <RootNamespace>AnimalFamilyTree</RootNamespace>
     <AssemblyName>AnimalFamilyTree</AssemblyName>
-    <OutputPath>../1.6/Assemblies/</OutputPath>
+    <OutputPath>../$(GameVersion)/Assemblies/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <DebugType>none</DebugType>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
     <Nullable>disable</Nullable>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj/**;bin/**</DefaultItemExcludes>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.*" ExcludeAssets="runtime" Condition="'$(GameVersion)' == '1.6'" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.7.*-*" ExcludeAssets="runtime" Condition="'$(GameVersion)' == '1.7'" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" Condition="'$(GameVersion)' == '1.6'" />
   </ItemGroup>
 </Project>

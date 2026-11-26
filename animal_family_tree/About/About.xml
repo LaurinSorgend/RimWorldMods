@@ -6,6 +6,7 @@
   <modVersion>0.1.0</modVersion>
   <supportedVersions>
     <li>1.6</li>
+    <li>1.7</li>
   </supportedVersions>
   <description>Adds an Animal Family tab that draws the family tree of your colony's animals: parents, grandparents, mates, children, siblings and cousins.
 

@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <GameVersion Condition="'$(GameVersion)' == ''">1.6</GameVersion>
+    <BaseIntermediateOutputPath>obj/$(GameVersion)/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>
