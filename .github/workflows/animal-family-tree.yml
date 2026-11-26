@@ -1,0 +1,66 @@
+name: Animal Family Tree
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "animal_family_tree/**"
+      - ".github/workflows/animal-family-tree.yml"
+    tags:
+      - "animal-family-tree-v*"
+  pull_request:
+    paths:
+      - "animal_family_tree/**"
+      - ".github/workflows/animal-family-tree.yml"
+  workflow_dispatch:
+
+env:
+  MOD_DIR: animal_family_tree
+  MOD_NAME: AnimalFamilyTree
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+
+      - name: Build 1.6 and 1.7
+        shell: pwsh
+        run: ./${{ env.MOD_DIR }}/build.ps1
+
+      - name: Package mod
+        run: |
+          mkdir -p dist/$MOD_NAME
+          cd $MOD_DIR
+          cp -r About Common 1.6 1.7 LoadFolders.xml ../dist/$MOD_NAME/
+          cd ../dist
+          zip -qr $MOD_NAME.zip $MOD_NAME
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.MOD_NAME }}
+          path: dist/${{ env.MOD_NAME }}.zip
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/animal-family-tree-v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.MOD_NAME }}
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME" "$MOD_NAME.zip"
+          --repo "$GITHUB_REPOSITORY"
+          --title "Animal Family Tree ${GITHUB_REF_NAME#animal-family-tree-}"
+          --generate-notes
