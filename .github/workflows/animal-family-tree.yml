@@ -22,9 +22,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: "10.0.x"
 
@@ -40,7 +40,7 @@ jobs:
           cd ../dist
           zip -qr $MOD_NAME.zip $MOD_NAME
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: ${{ env.MOD_NAME }}
           path: dist/${{ env.MOD_NAME }}.zip
@@ -52,7 +52,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: ${{ env.MOD_NAME }}
 
