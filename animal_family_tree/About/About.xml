@@ -4,6 +4,7 @@
   <author>Laurin</author>
   <packageId>laurin.animalfamilytree</packageId>
   <modVersion>0.1.0</modVersion>
+  <url>https://github.com/LaurinSorgend/RimWorldMods/tree/main/animal_family_tree</url>
   <supportedVersions>
     <li>1.6</li>
     <li>1.7</li>
@@ -12,5 +13,7 @@
 
 The mod keeps its own lineage records, so ancestors stay in the tree after they die, are butchered, sold or released. Select an animal and use the "Family tree" button to jump straight to its tree.
 
-No Harmony. Safe to add to an existing save.</description>
+No Harmony. Safe to add to an existing save.
+
+Source code and issues: https://github.com/LaurinSorgend/RimWorldMods</description>
 </ModMetaData>
